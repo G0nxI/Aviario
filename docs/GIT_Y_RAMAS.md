@@ -1,6 +1,8 @@
 # Estrategia Git y ramas — Aviario
 
-> **Estado:** propuesta de trabajo. En la revisión del 8 de noviembre de 2026 no había rulesets activos en el repositorio. Las restricciones descritas aquí no se aplican automáticamente hasta que se configuren y activen en GitHub.
+> **Estado (08/11/2026):** estrategia Git documentada y
+> protecciones de `main` y `develop` activadas mediante
+> rulesets de GitHub.
 
 ## Objetivo
 
@@ -72,18 +74,19 @@ git merge develop
 
 Resuelve cualquier conflicto y continúa. Este ejemplo presupone que la rama local `feature/login` ya existe. Si trabajas con un fork, ejecuta `git fetch upstream` y usa `git merge upstream/develop` en tu rama de trabajo.
 
-## Políticas recomendadas (todavía no activadas)
+## Protecciones de ramas (activas)
 
-Estas reglas describen el flujo deseado, **no el estado de protección actual**. Para aplicarlas, abre **Settings → Rules → Rulesets** en GitHub, crea o importa los rulesets y comprueba que estén activos.
+Desde el 8 de noviembre de 2026 están activos dos rulesets de GitHub, aplicados respectivamente a `main` y `develop`.
 
-- Bloquear borrados y `force push` en `main` y `develop`.
-- Exigir pull requests para integrar cambios en esas ramas.
-- Mientras haya un único mantenedor, usar **0 aprobaciones externas obligatorias**, aunque cada cambio se debe revisar antes de fusionarse.
-- En `main`, requerir la resolución de conversaciones del PR; en `develop`, mantener flexibilidad al principio.
-- No exigir pruebas CI hasta que haya comprobaciones automáticas configuradas y verificadas.
-- Recomendar **Squash merge** para simplificar el historial, sin imponer todavía historial lineal.
+- Se impide eliminar las ramas protegidas.
+- Se bloquean los `force push`.
+- Los cambios deben integrarse mediante pull requests.
+- Se requieren **0 aprobaciones obligatorias**, para permitir el mantenimiento individual del proyecto.
+- En `main`, es obligatorio resolver las conversaciones de revisión antes de fusionar; en `develop`, no se exige inicialmente.
+- Las comprobaciones automáticas de CI todavía no son obligatorias.
+- Se recomienda **Squash and merge** para mantener un historial sencillo, aunque también están permitidos otros métodos de fusión.
 
-Cuando se activen las reglas, prueba un PR real y comprueba su funcionamiento. Esta documentación por sí sola **no protege** ninguna rama.
+Las reglas se administran desde **Settings → Rules → Rulesets**. La documentación describe la configuración establecida, pero no sustituye las protecciones reales de GitHub.
 
 ## Nomenclatura de versiones
 
