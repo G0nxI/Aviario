@@ -22,8 +22,14 @@ Aunque inicialmente está pensado para canarios, su diseño buscará admitir cua
 - **Base de datos:** MySQL
 - **Infraestructura:** Docker Compose
 
+## Documentación y colaboración
+
+- [Cómo contribuir](CONTRIBUTING.md): propuestas, forks, incidencias y pull requests.
+- [Estrategia Git y ramas](docs/GIT_Y_RAMAS.md): uso de `main`, `develop` y ramas temporales.
+- [Licencia Apache 2.0](LICENSE).
+
+> La documentación de desarrollo y las instrucciones de instalación se ampliarán a medida que se publique el código del proyecto. Por ahora, estas guías describen el flujo de colaboración previsto; no significan que haya protecciones de ramas activadas.
+
 ---
 
 **Estado actual:** Desarrollo inicial · Sin versión estable publicada.
-
-La documentación, las instrucciones de instalación y las normas de contribución se incorporarán conforme avance el proyecto.
