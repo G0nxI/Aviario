@@ -1,0 +1,55 @@
+name: "💡 Proponer una mejora"
+description: "Propón una función o mejora para Aviario antes de implementarla."
+title: "[Propuesta] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Aviario está en una fase inicial: las propuestas ayudan a definir el alcance antes de escribir código.
+        Comprueba si existe una idea similar y evita incluir información personal.
+  - type: dropdown
+    id: modulo
+    attributes:
+      label: Área de la propuesta
+      options:
+        - Jaulas
+        - Aves y especies
+        - Reproducción y genealogía
+        - Cuidados
+        - Acceso y usuarios
+        - Interfaz web (React)
+        - API (PHP)
+        - Base de datos (MySQL)
+        - Docker y despliegue
+        - Documentación
+        - Otra
+    validations:
+      required: true
+  - type: textarea
+    id: necesidad
+    attributes:
+      label: ¿Qué necesidad o problema quieres resolver?
+      description: Explica el caso de uso antes de proponer una solución.
+      placeholder: "Necesito registrar ... porque ..."
+    validations:
+      required: true
+  - type: textarea
+    id: propuesta
+    attributes:
+      label: Solución propuesta
+      description: Describe el comportamiento esperado. No hace falta diseñar toda la implementación.
+      placeholder: "Sería útil poder ..."
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación (opcional)
+      description: ¿Cómo sabríamos que la mejora funciona correctamente?
+      placeholder: |
+        - [ ] La persona usuaria puede ...
+        - [ ] El sistema valida ...
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas o información adicional (opcional)
