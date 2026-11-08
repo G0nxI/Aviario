@@ -1,0 +1,71 @@
+name: "🐛 Reportar un error"
+description: "Comunica un fallo de Aviario para poder reproducirlo y corregirlo."
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por informar del problema. Comprueba antes si ya existe una incidencia similar.
+        No adjuntes contraseñas, tokens, archivos `.env` ni datos personales.
+  - type: dropdown
+    id: modulo
+    attributes:
+      label: Área afectada
+      options:
+        - Jaulas
+        - Aves y especies
+        - Reproducción y genealogía
+        - Cuidados
+        - Acceso y usuarios
+        - Interfaz web (React)
+        - API (PHP)
+        - Base de datos (MySQL)
+        - Docker y despliegue
+        - Documentación
+        - Otra o desconocida
+    validations:
+      required: true
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: ¿Qué está fallando?
+      description: Describe el problema con claridad.
+      placeholder: "Al guardar una jaula con ..., aparece ..."
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducirlo
+      description: Indica una secuencia concreta si puedes reproducir el fallo.
+      placeholder: |
+        1. Abrir ...
+        2. Pulsar ...
+        3. Observar ...
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Resultado esperado
+      placeholder: "Debería ..."
+    validations:
+      required: true
+  - type: textarea
+    id: obtenido
+    attributes:
+      label: Resultado observado
+      placeholder: "En cambio, sucede ..."
+    validations:
+      required: true
+  - type: input
+    id: entorno
+    attributes:
+      label: Entorno (opcional)
+      description: Sistema operativo, navegador, versión o forma de ejecución (por ejemplo, Docker).
+      placeholder: "Windows 11 · Firefox · Docker Compose"
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: Capturas, registros u otros detalles (opcional)
+      description: Oculta datos personales, secretos y tokens antes de adjuntar evidencias.
